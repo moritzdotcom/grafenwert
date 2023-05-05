@@ -59,7 +59,7 @@ export default function Home() {
             </p>
           </div>
           <div className="bg-gray-300 p-3 flex flex-col gap-3">
-            <h2 className="text-accent text-2xl">Investment</h2>
+            <h2 className="text-accent text-2xl">Finanzierung</h2>
             <p className="text-gray-700">
               Wir investieren in Immobilien aller Art. Von der Eigentumswohnung
               bis hin zum Mehrfamilienhaus. Wir sind Ihr Ansprechpartner, wenn
