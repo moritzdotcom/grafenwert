@@ -6,9 +6,13 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { useState } from 'react';
 import ClickAwayListener from 'react-click-away-listener';
 
-function MobileMenu() {
+function MobileMenu({ onClose }: { onClose: () => void }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen((o) => !o);
+  const closeAll = () => {
+    setIsOpen(false);
+    onClose();
+  };
 
   return (
     <>
@@ -26,34 +30,42 @@ function MobileMenu() {
           isOpen ? 'max-h-96 py-2' : 'max-h-0 overflow-hidden'
         } transition-all flex flex-col gap-2 -mt-1 -mx-2 px-5 bg-gray-400`}
       >
-        <Link onClick={toggle} href="#">
+        <Link onClick={closeAll} href="/services/brokerage">
           Vermittlung
         </Link>
         <div className="w-full bg-accent h-[1px]" />
-        <Link onClick={toggle} href="#">
+        <Link onClick={closeAll} href="/services/consulting">
           Beratung
         </Link>
         <div className="w-full bg-accent h-[1px]" />
-        <Link onClick={toggle} href="#">
+        <Link onClick={closeAll} href="/services/management">
           Hausverwaltung
         </Link>
         <div className="w-full bg-accent h-[1px]" />
-        <Link onClick={toggle} href="#">
+        <Link onClick={closeAll} href="/services/financing">
           Finanzierung
         </Link>
         <div className="w-full bg-accent h-[1px]" />
-        <Link onClick={toggle} href="#">
+        <Link onClick={closeAll} href="/services/evaluation">
           Immobilien Bewertung
         </Link>
       </div>
       <div className="w-full bg-accent h-[1px]" />
-      <Link href="/about">Über uns</Link>
+      <Link onClick={closeAll} href="/about">
+        Über uns
+      </Link>
       <div className="w-full bg-accent h-[1px]" />
-      <Link href="/press">Presse</Link>
+      <Link onClick={closeAll} href="/press">
+        Presse
+      </Link>
       <div className="w-full bg-accent h-[1px]" />
-      <Link href="/jobs">Karriere</Link>
+      <Link onClick={closeAll} href="/jobs">
+        Karriere
+      </Link>
       <div className="w-full bg-accent h-[1px]" />
-      <Link href="/contact">Kontakt</Link>
+      <Link onClick={closeAll} href="/contact">
+        Kontakt
+      </Link>
     </>
   );
 }
@@ -81,7 +93,7 @@ export default function Navbar() {
               : 'opacity-0 pointer-events-none'
           }`}
         >
-          <MobileMenu />
+          <MobileMenu onClose={() => setIsOpen(false)} />
         </div>
         <div className="gap-4 hidden sm:flex">
           <div className="relative">
