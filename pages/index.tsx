@@ -1,7 +1,7 @@
 import ServiceCard from '@/components/serviceCard';
 import Head from 'next/head';
 import Image from 'next/image';
-import heroImage from '../assets/images/hero.jpeg';
+import heroImage from '../public/images/hero.jpeg';
 
 export default function Home() {
   return (
@@ -44,25 +44,25 @@ export default function Home() {
               href="/services/brokerage"
               title="Vermittlung"
               text="Wir vermitteln Immobilien aller Art. Von der Eigentumswohnung bis hin zum Mehrfamilienhaus. Wir sind Ihr Ansprechpartner, wenn es um die Vermittlung von Immobilien geht."
-              imageUrl="/api/image/services/brokerage.jpg"
+              imageUrl="/images/services/brokerage.jpg"
             />
             <ServiceCard
               href="/services/consulting"
               title="Beratung"
               text="Wir beraten Sie in allen Fragen rund um Immobilien. Von der Finanzierung bis hin zur Immobilienbewertung. Wir sind Ihr Ansprechpartner, wenn es um die Beratung von Immobilien geht."
-              imageUrl="/api/image/services/consulting.jpg"
+              imageUrl="/images/services/consulting.jpg"
             />
             <ServiceCard
               href="/services/management"
               title="Hausverwaltung"
               text="Wir verwalten Immobilien aller Art. Von der Eigentumswohnung bis hin zum Mehrfamilienhaus. Wir sind Ihr Ansprechpartner, wenn es um die Verwaltung von Immobilien geht."
-              imageUrl="/api/image/services/management.jpg"
+              imageUrl="/images/services/management.jpg"
             />
             <ServiceCard
               href="/services/financing"
               title="Finanzierung"
               text="Wir investieren in Immobilien aller Art. Von der Eigentumswohnung bis hin zum Mehrfamilienhaus. Wir sind Ihr Ansprechpartner, wenn es um die Investition in Immobilien geht."
-              imageUrl="/api/image/services/financing.jpg"
+              imageUrl="/images/services/financing.jpg"
             />
           </div>
           <h1 className="text-accent text-center text-3xl sm:text-4xl my-9">
