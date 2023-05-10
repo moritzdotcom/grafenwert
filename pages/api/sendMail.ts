@@ -11,8 +11,8 @@ export default async function handler(
 ) {
   try {
     await sendgrid.send({
-      to: 'contact@grafenwert.de',
-      from: 'moritz.loechner@gmail.com',
+      to: 'info@grafenwert.de',
+      from: 'Website Kontaktfomular <website@grafenwert.de>',
       replyTo: req.body.email,
       subject: `Anliegen von ${req.body.name} über Grafenwert Kontaktformular`,
       html: `
