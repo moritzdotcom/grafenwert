@@ -3,7 +3,7 @@ import styles from '@/styles/services.module.css';
 
 export default function ServicesFinancingPage() {
   return (
-    <>
+    <div className="min-h-[88vh]">
       <main className={styles.container}>
         <h1 className={styles.heading}>Finanzierung & Versicherung</h1>
         <p className="text-gray-600 text-justify">
@@ -22,6 +22,6 @@ export default function ServicesFinancingPage() {
         </p>
       </main>
       <ContactBanner ctaText="Sie haben Interesse an einer Finanzierung?" />
-    </>
+    </div>
   );
 }

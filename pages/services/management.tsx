@@ -3,7 +3,7 @@ import styles from '@/styles/services.module.css';
 
 export default function ServicesManagementPage() {
   return (
-    <>
+    <div className="min-h-[88vh]">
       <main className={styles.container}>
         <h1 className={styles.heading}>Hausverwaltung</h1>
         <p className="text-gray-600 text-justify">
@@ -20,6 +20,6 @@ export default function ServicesManagementPage() {
         </p>
       </main>
       <ContactBanner ctaText="Benötigen Sie Hilfe bei der Verwaltung Ihrer Immobilie?" />
-    </>
+    </div>
   );
 }

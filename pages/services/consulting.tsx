@@ -3,7 +3,7 @@ import styles from '@/styles/services.module.css';
 
 export default function ServicesConsultingPage() {
   return (
-    <>
+    <div className="min-h-[88vh]">
       <main className={styles.container}>
         <h1 className={styles.heading}>Ganzheitliche Beratung</h1>
         <p className="text-gray-600 text-justify">
@@ -26,6 +26,6 @@ export default function ServicesConsultingPage() {
         </div>
       </main>
       <ContactBanner ctaText="Sind Sie interessiert an einer Beratung in einem der Themen?" />
-    </>
+    </div>
   );
 }
