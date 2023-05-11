@@ -20,30 +20,35 @@ export default function Footer() {
         <div className="flex flex-row items-center gap-3 text-gray-800">
           <Link
             href="https://instagram.com/grafenwert"
+            target="_blank"
             className="hover:text-accent"
           >
             <BsInstagram />
           </Link>
           <Link
             href="https://www.tiktok.com/@grafenwert"
+            target="_blank"
             className="hover:text-accent"
           >
             <FaTiktok />
           </Link>
           <Link
             href="https://www.linkedin.com/company/grafenwert"
+            target="_blank"
             className="hover:text-accent"
           >
             <BsLinkedin />
           </Link>
           <Link
             href="https://www.facebook.com/grafenwert"
+            target="_blank"
             className="hover:text-accent"
           >
             <BsFacebook />
           </Link>
           <Link
             href="https://www.youtube.com/@grafenwert"
+            target="_blank"
             className="hover:text-accent"
           >
             <BsYoutube />
