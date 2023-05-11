@@ -9,12 +9,13 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  const { name, email, message, subject } = req.body;
   try {
     await sendgrid.send({
       to: 'info@grafenwert.de',
       from: 'Website Kontaktfomular <website@grafenwert.de>',
-      replyTo: req.body.email,
-      subject: `Anliegen von ${req.body.name} über Grafenwert Kontaktformular`,
+      replyTo: email,
+      subject: `Anliegen von ${name} über Grafenwert Kontaktformular`,
       html: `
       <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html lang="en">
@@ -23,9 +24,12 @@ export default async function handler(
         <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
         </head>
         <body>
-          <p>Message:</p>
-          <p>${req.body.message}</p>
-          <p>Reply to: ${req.body.email}</p>
+          ${
+            subject ? `<p style="font-size: 14px">Anliegen: ${subject}</p>` : ''
+          }
+          <p style="font-size: 14px">Nachricht:</p>
+          <p style="font-size: 12px">${message}</p>
+          <p style="font-size: 12px">Reply to: ${email}</p>
         </body>
       </html>`,
     });

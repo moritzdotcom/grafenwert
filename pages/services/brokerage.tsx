@@ -62,7 +62,10 @@ export default function ServicesBrokeragePage() {
           </div>
         </div>
       </main>
-      <ContactBanner ctaText="Haben Sie Interesse an diesem Angebot?" />
+      <ContactBanner
+        ctaText="Haben Sie Interesse an diesem Angebot?"
+        subject="Immobilienvermittlung"
+      />
     </>
   );
 }

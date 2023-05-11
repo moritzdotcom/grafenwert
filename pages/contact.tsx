@@ -1,6 +1,6 @@
 import GoogleMap from '@/components/googleMap';
 import Head from 'next/head';
-import { GetStaticProps } from 'next/types';
+import { GetServerSideProps } from 'next/types';
 import { FormEvent, useState } from 'react';
 import { MdLocalPhone, MdMail } from 'react-icons/md';
 
@@ -12,8 +12,10 @@ type ErrorObject = {
 
 export default function ContactPage({
   gmapsApiKey,
+  subject,
 }: {
   gmapsApiKey: string | undefined;
+  subject: string | undefined;
 }) {
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState('');
@@ -45,7 +47,6 @@ export default function ContactPage({
     }
 
     setErrors({ ...tempErrors });
-    console.log('errors', errors);
     return isValid;
   };
 
@@ -61,6 +62,7 @@ export default function ContactPage({
           email: email,
           name: name,
           message: message,
+          subject,
         }),
         headers: {
           'Content-Type': 'application/json',
@@ -216,12 +218,14 @@ export default function ContactPage({
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const gmapsApiKey = process.env.GMAPS_API_KEY;
+  const { subject } = context.query;
 
   return {
     props: {
       gmapsApiKey,
+      subject: subject || null,
     },
   };
 };

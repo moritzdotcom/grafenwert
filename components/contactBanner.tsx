@@ -1,7 +1,13 @@
 import Link from 'next/link';
 import { IoMdChatboxes } from 'react-icons/io';
 
-export default function ContactBanner({ ctaText }: { ctaText: string }) {
+export default function ContactBanner({
+  ctaText,
+  subject,
+}: {
+  ctaText: string;
+  subject?: string;
+}) {
   return (
     <div className="bg-gray-100 p-7 my-3">
       <div className="w-full flex flex-col-reverse sm:flex-row items-center sm:items-start justify-between gap-3 max-w-screen-lg mx-auto">
@@ -10,7 +16,8 @@ export default function ContactBanner({ ctaText }: { ctaText: string }) {
             {ctaText}
           </h4>
           <Link
-            href="/contact"
+            href={`/contact${subject ? `?subject=${subject}` : ''}`}
+            as="/contact"
             className="bg-accent text-white px-3 py-2 rounded"
           >
             Kontaktieren Sie uns

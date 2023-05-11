@@ -21,7 +21,10 @@ export default function ServicesFinancingPage() {
           bekommen, und zwar zu Top-Konditionen und mit ganzheitlicher Beratung.
         </p>
       </main>
-      <ContactBanner ctaText="Sie haben Interesse an einer Finanzierung?" />
+      <ContactBanner
+        ctaText="Sie haben Interesse an einer Finanzierung?"
+        subject="Finanzierung & Versicherung"
+      />
     </div>
   );
 }

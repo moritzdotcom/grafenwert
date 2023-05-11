@@ -19,7 +19,10 @@ export default function ServicesManagementPage() {
           Stärke wird auch Ihrer Immobilie zugutekommen.
         </p>
       </main>
-      <ContactBanner ctaText="Benötigen Sie Hilfe bei der Verwaltung Ihrer Immobilie?" />
+      <ContactBanner
+        ctaText="Benötigen Sie Hilfe bei der Verwaltung Ihrer Immobilie?"
+        subject="Hausverwaltung"
+      />
     </div>
   );
 }

@@ -25,7 +25,10 @@ export default function ServicesConsultingPage() {
           </ul>
         </div>
       </main>
-      <ContactBanner ctaText="Sind Sie interessiert an einer Beratung in einem der Themen?" />
+      <ContactBanner
+        ctaText="Sind Sie interessiert an einer Beratung in einem der Themen?"
+        subject="Beratung"
+      />
     </div>
   );
 }
