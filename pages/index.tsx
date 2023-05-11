@@ -4,10 +4,33 @@ import Image from 'next/image';
 import heroImage from '../public/images/hero.jpeg';
 
 export default function Home() {
+  const title = 'Grafenwert Immobilien';
+  const description =
+    'Wir für Sie - Wir stehen Ihnen zur Seite, wenn es um Immobilien geht. Zuverlässig, persönlich und kompetent.';
+  const favicon = '/favicon.ico';
+  const metaImage = 'https://www.grafenwert.de/images/hero.jpeg';
+  const url = 'https://www.grafenwert.de';
+
   return (
     <>
       <Head>
-        <title>Grafenwert Immobilien</title>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="shortcut icon" href={favicon} />
+        <link rel="icon" href={favicon} />
+
+        <meta name="twitter:image" content={metaImage} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content={url} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={metaImage} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:site_name" content={title} />
+        <meta property="og:url" content={url} />
       </Head>
       <div>
         <header>
