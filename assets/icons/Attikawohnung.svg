@@ -1,0 +1,30 @@
+<svg width="100" height="146" viewBox="0 0 100 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_36_453" fill="white">
+<path d="M0 37H100V146H0V37Z"/>
+</mask>
+<path d="M100 146V151H105V146H100ZM0 146H-5V151H0V146ZM95 37V146H105V37H95ZM100 141H0V151H100V141ZM5 146V37H-5V146H5Z" fill="#B6B6B6" mask="url(#path-1-inside-1_36_453)"/>
+<line y1="38.5" x2="100" y2="38.5" stroke="#602C23" stroke-width="3"/>
+<line y1="68.5" x2="100" y2="68.5" stroke="#B6B6B6" stroke-width="3"/>
+<line y1="100.5" x2="100" y2="100.5" stroke="#B6B6B6" stroke-width="3"/>
+<rect x="39" y="123" width="21" height="18" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="70" y="109" width="17" height="12" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="56" y="74" width="31" height="12" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="56" y="44" width="31" height="12" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="34" y="16" width="31" height="12" stroke="#602C23" stroke-width="2"/>
+<rect x="12" y="74" width="31" height="12" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="12" y="44" width="31" height="12" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="12" y="109" width="17" height="12" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="39" y="118" width="21" height="5" stroke="#B6B6B6" stroke-width="2"/>
+<line x1="49.5" y1="122" x2="49.5" y2="142" stroke="#B6B6B6"/>
+<line x1="71.5" y1="74" x2="71.5" y2="86" stroke="#B6B6B6"/>
+<line x1="71.5" y1="44" x2="71.5" y2="56" stroke="#B6B6B6"/>
+<line x1="49.5" y1="16" x2="49.5" y2="28" stroke="#602C23"/>
+<line x1="27.5" y1="74" x2="27.5" y2="86" stroke="#B6B6B6"/>
+<line x1="27.5" y1="44" x2="27.5" y2="56" stroke="#B6B6B6"/>
+<line x1="51.5" y1="132" x2="51.5" y2="133" stroke="#B6B6B6"/>
+<line x1="47.5" y1="132" x2="47.5" y2="133" stroke="#B6B6B6"/>
+<line x1="2.5" y1="18" x2="2.5" y2="37" stroke="#602C23" stroke-width="5"/>
+<line x1="50.6588" y1="2.34923" x2="0.855053" y2="20.4763" stroke="#602C23" stroke-width="5"/>
+<line x1="98.7678" y1="20.5024" x2="48.964" y2="2.37529" stroke="#602C23" stroke-width="5"/>
+<line x1="97.5" y1="18" x2="97.5" y2="37" stroke="#602C23" stroke-width="5"/>
+</svg>

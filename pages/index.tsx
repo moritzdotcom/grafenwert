@@ -48,11 +48,11 @@ export default function Home() {
                 </h2>
                 <h3 className="text-justify">
                   Wir sind ein Eigentümergeführtes
-                  Immobilien-Beratungsunternehmen, mit Jahrelanger
-                  Kompetenz/Erfahrung im Bereich Investments und Immobilien.
-                  Verwurzelt in Düsseldorf Beraten wir Mandanten in ganz NRW.
-                  Dabei ist uns der stetige Austausch und das persönliche
-                  Gespräch immer wichtig. Denn Vertrauen heißt: sich kennen.
+                  Immobilien-Beratungsunternehmen, mit Jahrelanger Kompetenz und
+                  Erfahrung im Bereich Investments und Immobilien. Verwurzelt in
+                  Düsseldorf Beraten wir Mandanten in ganz NRW. Dabei ist uns
+                  der stetige Austausch und das persönliche Gespräch immer
+                  wichtig. Denn Vertrauen heißt: sich kennen.
                 </h3>
               </div>
             </div>

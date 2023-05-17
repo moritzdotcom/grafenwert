@@ -1,0 +1,24 @@
+<svg width="110" height="132" viewBox="0 0 110 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M108 38.2594V27.3379H68.0328V2H16.7705V51.802H2V130H50.2213V108.594H108V52.2389" stroke="#808080" stroke-width="3"/>
+<line x1="22" y1="130" x2="22" y2="102" stroke="#808080" stroke-width="2"/>
+<line x1="1" y1="103" x2="23" y2="103" stroke="#808080" stroke-width="2"/>
+<line x1="18" y1="51.5" x2="29" y2="51.5" stroke="#808080" stroke-width="3"/>
+<line x1="44" y1="51.5" x2="69" y2="51.5" stroke="#808080" stroke-width="3"/>
+<line x1="67.5" y1="53" x2="67.5" y2="25" stroke="#808080" stroke-width="3"/>
+<line x1="49.5" y1="109" x2="49.5" y2="92" stroke="#808080" stroke-width="3"/>
+<line x1="49" y1="91.5" x2="65" y2="91.5" stroke="#808080" stroke-width="3"/>
+<line x1="92" y1="37.5" x2="108" y2="37.5" stroke="#808080" stroke-width="3"/>
+<line x1="49.5" y1="78" x2="49.5" y2="52" stroke="#808080" stroke-width="3"/>
+<line x1="1" y1="108" x2="23" y2="108" stroke="#808080" stroke-width="2"/>
+<line x1="1" y1="113" x2="23" y2="113" stroke="#808080" stroke-width="2"/>
+<line x1="1" y1="119" x2="23" y2="119" stroke="#808080" stroke-width="2"/>
+<line x1="1" y1="124" x2="23" y2="124" stroke="#808080" stroke-width="2"/>
+<mask id="path-15-inside-1_108_136" fill="white">
+<path d="M49 75V75C57.8366 75 65 82.1634 65 91V92H49V75Z"/>
+</mask>
+<path d="M49 72C59.4934 72 68 80.5066 68 91H62C62 83.8203 56.1797 78 49 78V72ZM65 92H49H65ZM49 92V75V92ZM49 72C59.4934 72 68 80.5066 68 91V92H62V91C62 83.8203 56.1797 78 49 78V72Z" fill="#808080" mask="url(#path-15-inside-1_108_136)"/>
+<mask id="path-17-inside-2_108_136" fill="white">
+<path d="M108 55V55C99.1634 55 92 47.8366 92 39V39H108V55Z"/>
+</mask>
+<path d="M108 58C97.5066 58 89 49.4934 89 39H95C95 46.1797 100.82 52 108 52V58ZM92 39H108H92ZM108 39V55V39ZM108 58C97.5066 58 89 49.4934 89 39H95C95 46.1797 100.82 52 108 52V58Z" fill="#808080" mask="url(#path-17-inside-2_108_136)"/>
+</svg>

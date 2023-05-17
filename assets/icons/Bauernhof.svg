@@ -1,0 +1,14 @@
+<svg width="141" height="124" viewBox="0 0 141 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M138.5 22V121.5H99.5V22C99.5 11.2304 108.23 2.5 119 2.5C129.77 2.5 138.5 11.2304 138.5 22Z" stroke="#602C23" stroke-width="5"/>
+<mask id="path-2-inside-1_36_455" fill="white">
+<path d="M1 67H100V124H1V67Z"/>
+</mask>
+<path d="M100 124V129H105V124H100ZM1 124H-4V129H1V124ZM95 67V124H105V67H95ZM100 119H1V129H100V119ZM6 124V67H-4V124H6Z" fill="#602C23" mask="url(#path-2-inside-1_36_455)"/>
+<line x1="2.23223" y1="69.2322" x2="52.2322" y2="19.2322" stroke="#602C23" stroke-width="5"/>
+<line x1="19.2266" y1="119.347" x2="83.4423" y2="71.6355" stroke="#602C23" stroke-width="2"/>
+<line x1="19.4186" y1="72.6364" x2="83.6357" y2="120.346" stroke="#602C23" stroke-width="2"/>
+<line x1="48.7678" y1="19.2322" x2="98.7678" y2="69.2322" stroke="#602C23" stroke-width="5"/>
+<rect x="19" y="71" width="64" height="49" stroke="#602C23" stroke-width="2"/>
+<line x1="100" y1="36" x2="138" y2="36" stroke="#602C23" stroke-width="2"/>
+<line x1="100" y1="53" x2="138" y2="53" stroke="#602C23" stroke-width="2"/>
+</svg>

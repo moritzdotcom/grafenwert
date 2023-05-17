@@ -1,0 +1,29 @@
+<svg width="100" height="142" viewBox="0 0 100 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2.5" y="2.5" width="95" height="137" stroke="#B6B6B6" stroke-width="5"/>
+<line y1="34.5" x2="100" y2="34.5" stroke="#B6B6B6" stroke-width="3"/>
+<line x1="48" y1="34.5" x2="100" y2="34.5" stroke="#602C23" stroke-width="3"/>
+<line y1="64.5" x2="100" y2="64.5" stroke="#B6B6B6" stroke-width="3"/>
+<line y1="96.5" x2="100" y2="96.5" stroke="#B6B6B6" stroke-width="3"/>
+<rect x="39" y="119" width="21" height="18" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="70" y="105" width="17" height="12" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="56" y="70" width="31" height="12" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="56" y="40" width="31" height="12" stroke="#602C23" stroke-width="2"/>
+<rect x="56" y="9" width="31" height="12" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="12" y="70" width="31" height="12" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="12" y="40" width="31" height="12" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="12" y="9" width="31" height="12" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="12" y="105" width="17" height="12" stroke="#B6B6B6" stroke-width="2"/>
+<rect x="39" y="114" width="21" height="5" stroke="#B6B6B6" stroke-width="2"/>
+<line x1="49.5" y1="118" x2="49.5" y2="138" stroke="#B6B6B6"/>
+<line x1="71.5" y1="70" x2="71.5" y2="82" stroke="#B6B6B6"/>
+<line x1="71.5" y1="40" x2="71.5" y2="52" stroke="#602C23"/>
+<line x1="71.5" y1="9" x2="71.5" y2="21" stroke="#B6B6B6"/>
+<line x1="27.5" y1="70" x2="27.5" y2="82" stroke="#B6B6B6"/>
+<line x1="27.5" y1="40" x2="27.5" y2="52" stroke="#B6B6B6"/>
+<line x1="27.5" y1="9" x2="27.5" y2="21" stroke="#B6B6B6"/>
+<line x1="51.5" y1="128" x2="51.5" y2="129" stroke="#B6B6B6"/>
+<line x1="47.5" y1="128" x2="47.5" y2="129" stroke="#B6B6B6"/>
+<line x1="49.5" y1="36" x2="49.5" y2="64" stroke="#602C23" stroke-width="3"/>
+<line x1="97.5" y1="35" x2="97.5" y2="63" stroke="#602C23" stroke-width="5"/>
+<line x1="48" y1="64.5" x2="100" y2="64.5" stroke="#602C23" stroke-width="3"/>
+</svg>
