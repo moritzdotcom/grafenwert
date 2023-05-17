@@ -268,14 +268,14 @@ export default function EvaluationSizeStep({
       <div className="flex items-center justify-end gap-3 mt-5">
         <button
           onClick={goBack}
-          className="text-accent bg-gray-100 px-3 py-2 rounded w-full max-w-xs"
+          className="text-accent bg-gray-100 px-3 py-2 rounded w-full sm:max-w-[240px]"
         >
           Zurück
         </button>
         <button
           onClick={onSubmit}
           disabled={isDisabled()}
-          className="bg-accent text-white px-3 py-2 rounded font-semibold w-full max-w-xs"
+          className="bg-accent text-white px-3 py-2 rounded font-semibold w-full sm:max-w-[240px]"
         >
           Weiter
         </button>

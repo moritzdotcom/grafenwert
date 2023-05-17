@@ -70,7 +70,7 @@ export default function EvaluationEquipmentStep({
       <div className="flex items-center justify-start gap-3 mt-5">
         <button
           onClick={goBack}
-          className="text-accent bg-gray-100 px-3 py-2 rounded w-full max-w-xs"
+          className="text-accent bg-gray-100 px-3 py-2 rounded w-full sm:max-w-[240px]"
         >
           Zurück
         </button>

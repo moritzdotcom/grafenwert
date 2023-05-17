@@ -131,7 +131,7 @@ export default function EvaluationContactStep({
           )}
         </div>
       </div>
-      <div className="mt-5 flex items-start gap-2">
+      <div className="mt-5 grid grid-cols-[1rem_1fr] items-start gap-2">
         <input
           type="checkbox"
           id="privacy"
@@ -154,14 +154,14 @@ export default function EvaluationContactStep({
       <div className="flex flex-col-reverse md:flex-row items-center justify-end gap-3 mt-5">
         <button
           onClick={goBack}
-          className="text-accent bg-gray-100 px-3 py-2 rounded w-full max-w-xs"
+          className="text-accent bg-gray-100 px-3 py-2 rounded w-full sm:max-w-[240px]"
         >
           Zurück
         </button>
         <button
           onClick={handleSubmit}
           disabled={!privacyChecked || !firstName || !lastName || !email}
-          className="bg-accent text-white px-3 py-2 rounded font-semibold w-full max-w-xs"
+          className="bg-accent text-white px-3 py-2 rounded font-semibold w-full sm:max-w-[360px]"
         >
           Bewertung anfordern
         </button>

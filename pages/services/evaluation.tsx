@@ -46,7 +46,7 @@ export default function ServicesEvaluationPage({
   gmapsApiKey: string;
   mapBoxApiKey: string;
 }) {
-  const [step, setStep] = useState<typeof steps[number]>('TYPE');
+  const [step, setStep] = useState<typeof steps[number]>('CONTACT');
   const [baseType, setBaseType] = useState<BaseImmoType>();
   const [subType, setSubType] = useState<ImmoType>();
   const [location, setLocation] = useState<ImmoLocation>();
