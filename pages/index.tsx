@@ -1,14 +1,14 @@
 import ServiceCard from '@/components/serviceCard';
 import Head from 'next/head';
 import Image from 'next/image';
-import heroImage from '../public/images/hero.jpeg';
+import heroImage from '../public/images/hero.jpg';
 
 export default function Home() {
   const title = 'Grafenwert Immobilien';
   const description =
     'Wir für Sie - Wir stehen Ihnen zur Seite, wenn es um Immobilien geht. Zuverlässig, persönlich und kompetent.';
   const favicon = '/favicon.ico';
-  const metaImage = 'https://www.grafenwert.de/images/hero.jpeg';
+  const metaImage = 'https://www.grafenwert.de/images/hero.jpg';
   const url = 'https://www.grafenwert.de';
 
   return (
@@ -95,8 +95,8 @@ export default function Home() {
             <p>
               Grafenwert Immobilien ist ein Zusammenschluss von Löchner Capital
               und Sam Zahiri (ehemals Colliers International AG und Graefer
-              Immobilien). Gemeinsam bieten Ihnen die bestmögliche Beratung in
-              einer immer komplexer werdenden Immobilienwelt.
+              Immobilien). Gemeinsam bieten wir Ihnen die bestmögliche Beratung
+              in einer immer komplexer werdenden Immobilienwelt.
             </p>
             <ul className="list-disc list-inside">
               <li>ESG</li>

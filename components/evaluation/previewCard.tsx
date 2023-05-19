@@ -44,6 +44,8 @@ function MapboxMap({
       longitude={lng || initialLng}
       zoom={lat && lng ? 12 : 4}
       mapStyle="mapbox://styles/moritzgrafenwert/clhp2b92x01tl01qy0v7q2ftu"
+      interactive={false}
+      cursor="default"
     >
       {lat && lng && <Marker longitude={lng} latitude={lat} />}
     </Map>

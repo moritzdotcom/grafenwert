@@ -96,11 +96,11 @@ export default function EvaluationTypeStep({
           onClick={() => onSubmit('Mehrfamilienhaus', 'Mehrfamilienhaus')}
           src={Mehrfamilienhaus}
           title="Mehrfamilienhaus"
-          opaque={Boolean(baseType)}
+          opaque={Boolean(baseType && baseType !== 'Mehrfamilienhaus')}
         />
       </div>
       <div ref={subtypeRef} />
-      {baseType && (
+      {(baseType == 'Wohnung' || baseType == 'Haus') && (
         <div className="mt-14">
           <h3 className="text-xl text-accent">
             Um welche Immobilienart handelt es sich?
@@ -167,6 +167,16 @@ export default function EvaluationTypeStep({
               />
             </div>
           )}
+        </div>
+      )}
+      {baseType == 'Mehrfamilienhaus' && (
+        <div className="flex items-center justify-center gap-3 mt-5">
+          <button
+            onClick={() => onSubmit('Mehrfamilienhaus', 'Mehrfamilienhaus')}
+            className="bg-accent text-white px-3 py-2 rounded font-semibold w-full sm:max-w-[240px]"
+          >
+            Weiter
+          </button>
         </div>
       )}
     </>
