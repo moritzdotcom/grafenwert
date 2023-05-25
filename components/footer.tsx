@@ -47,7 +47,7 @@ export default function Footer() {
             <BsFacebook />
           </Link>
           <Link
-            href="https://www.youtube.com/@grafenwert"
+            href="https://www.youtube.com/@Grafenwert-Immobilien"
             target="_blank"
             className="hover:text-accent"
           >
