@@ -102,9 +102,9 @@ export default function ContactPage({
             <p>Grafenwert Immobilien GmbH</p>
             <p>Kittelbachstrasse 10</p>
             <p>40489 Düsseldorf</p>
-            <a className="block mt-3" href="tel:+49 0211-522 884 20">
+            <a className="block mt-3" href="tel:+49 152 28688082">
               <MdLocalPhone className="inline text-lg mr-2 text-accent" />
-              0211-522 884 20
+              0152 286 880 82
             </a>
             <a className="block mt-0 lg:mt-3" href="mailto:info@grafenwert.de">
               <MdMail className="inline text-lg mr-2 text-accent" />

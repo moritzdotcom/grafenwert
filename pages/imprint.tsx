@@ -17,8 +17,8 @@ export default function ImprintPage() {
         <p>Kittelbachstrasse 10</p>
         <p>40489 Düsseldorf</p>
         <br />
-        {/* TODO: <p>Telefon (Zentrale): (0211) 522 884 10</p>
-        <p>Fax: (0211) 522 884 29</p> */}
+        <p>Telefon (Zentrale): +49 152 286 880 82</p>
+        {/* <p>Fax: (0211) 522 884 29</p> */}
         <p>E-Mail: info@grafenwert.de</p>
         <br />
         <p>Geschäftsführung:</p>
