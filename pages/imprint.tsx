@@ -14,8 +14,8 @@ export default function ImprintPage() {
         </h3>
         <div className="w-full border-t-[1px] border-gray-500 my-2"></div>
         <p>Grafenwert Immobilien GmbH</p>
-        <p>Kittelbachstrasse 10</p>
-        <p>40489 Düsseldorf</p>
+        <p>Graf-Adolf-Platz 12</p>
+        <p>40213 Düsseldorf</p>
         <br />
         <p>Telefon (Zentrale): +49 152 286 880 82</p>
         {/* <p>Fax: (0211) 522 884 29</p> */}

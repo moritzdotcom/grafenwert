@@ -7,18 +7,11 @@ export default function ServicesFinancingPage() {
       <main className={styles.container}>
         <h1 className={styles.heading}>Finanzierung & Versicherung</h1>
         <p className="text-gray-600 text-justify">
-          Ein Euro gespart ist wie Ein Euro verdient! Geben Sie nicht unnötig
-          Geld für teure Finanzierungen und Versicherungen aus. Lassen Sie uns
-          vergleichen was möglich ist. Unser Spezialist für Finanzierungen und
-          Versicherungen lädt Sie gerne zu einem persönlichen Beratungsgespräch
-          in unser Büro ein. Sie möchten eine neue Immobilie kaufen? Lassen Sie
-          uns Angebote diverser Banken vergleichen und das Beste für Sie
-          Zusammenstellen. Durch unsere langjährigen Kontakte bei verschiedenen
-          Banken, erhalten wir Top-Konditionen und können Ihre Finanzierung
-          schneller platzieren. Gerade beim Immobilienkauf ist eine schnelle
-          Finanzierungsbestätigung wichtig, da sonst ein anderer Interessent den
-          Zuschlag kriegen könnte. Wir sorgen dafür, dass Sie den Zuschlag
-          bekommen, und zwar zu Top-Konditionen und mit ganzheitlicher Beratung.
+          Die Finanzierung und Versicherung ihrer Immobilie sollte den sich
+          ständig ändernden Marktbedingungen gerecht werden. Wir beraten sie
+          sowohl bei der Akquise als auch bei Refinanzierung individuell und
+          bankenunabhängig. Wir möchten, dass Sie ihre Finanzierung und
+          Versicherung zu Top-Konditionen erhalten.
         </p>
       </main>
       <ContactBanner

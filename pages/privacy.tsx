@@ -21,8 +21,8 @@ export default function PrivacyPage() {
         </p>
         <br />
         <p>Grafenwert Immobilien GmbH</p>
-        <p>Kittelbachstrasse 10</p>
-        <p>40489 Düsseldorf</p>
+        <p>Graf-Adolf-Platz 12</p>
+        <p>40213 Düsseldorf</p>
         <br />
         <p>
           Die verantwortliche Stelle entscheidet allein oder gemeinsam mit

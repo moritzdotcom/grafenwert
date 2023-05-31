@@ -100,8 +100,8 @@ export default function ContactPage({
               Kontaktinformationen
             </p>
             <p>Grafenwert Immobilien GmbH</p>
-            <p>Kittelbachstrasse 10</p>
-            <p>40489 Düsseldorf</p>
+            <p>Graf-Adolf-Platz 12</p>
+            <p>40213 Düsseldorf</p>
             <a className="block mt-3" href="tel:+49 152 28688082">
               <MdLocalPhone className="inline text-lg mr-2 text-accent" />
               0152 286 880 82

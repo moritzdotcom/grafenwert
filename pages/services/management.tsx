@@ -7,16 +7,12 @@ export default function ServicesManagementPage() {
       <main className={styles.container}>
         <h1 className={styles.heading}>Hausverwaltung</h1>
         <p className="text-gray-600 text-justify">
-          Ein dynamisches Management Ihrer Liegenschaften ist extrem wichtig und
-          wenn man das nicht verinnerlicht, kann einem viel Geld entgehen. Der
-          Begriff Hausverwaltung ist etwas in die Jahre gekommen und gibt dem
-          Bereich ein sehr trockenes Image. Dabei ist das Management Ihrer
-          Immobilie und ein kritisches Hinterfragen der Wohn- und
-          Geschäftsflächen wichtig für ein ertragsreiches cash flow. Wir schauen
-          uns jede Liegenschaft individuell an und besprechen mit Ihnen die
-          optimale Nutzung und eine gute Strukturierung Ihrer Mieterschaft. Alte
-          Gewohnheiten kritisch hinterfragen ist eine unserer Stärken und diese
-          Stärke wird auch Ihrer Immobilie zugutekommen.
+          Ein dynamisches Management Ihrer Liegenschaften ist in seinem stetig
+          ändernden Marktumfeld sehr wichtig. Wir hinterfragen mit Ihnen
+          zusammen ihre aktuelle Nutzung ihrer Wohn- und Geschäftsflächen und
+          entwickeln ein individuell auf ihre Anforderungen abgestimmtes
+          Konzept. Bei der nachfolgenden Umsetzung sind wir Ihnen gerne
+          behilflich.
         </p>
       </main>
       <ContactBanner

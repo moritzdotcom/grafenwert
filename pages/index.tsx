@@ -46,17 +46,20 @@ export default function Home() {
                   Grafenwert Immobilien
                 </h1>
                 <h2 className="text-xl sm:text-3xl">
-                  Wir für Sie - Wir stehen Ihnen zur Seite, wenn es um
-                  Immobilien geht. <br />
-                  Zuverlässig, persönlich und kompetent.
+                  Ihr Immobilienmakler in Düsseldorf und Nordrhein-Westfalen
+                  <br />
+                  Zuverlässig - persönlich - kompetent
                 </h2>
-                <h3 className="text-justify">
-                  Wir sind ein Eigentümergeführtes
-                  Immobilien-Beratungsunternehmen, mit Jahrelanger Kompetenz und
-                  Erfahrung im Bereich Investments und Immobilien. Verwurzelt in
-                  Düsseldorf Beraten wir Mandanten in ganz NRW. Dabei ist uns
-                  der stetige Austausch und das persönliche Gespräch immer
-                  wichtig. Denn Vertrauen heißt: sich kennen.
+                <h3 className="text-justify sm:text-center">
+                  Grafenwert Immobilien ist ein eigentümergeführtes
+                  Beratungsunternehmen, mit langjähriger Erfahrung im Bereich
+                  Investments und Immobilien. Verwurzelt in Düsseldorf beraten
+                  wir Mandanten für Immobilien in ganz Nordrhein-Westfalen.
+                  <br />
+                  Unsere Expertise umfasst die Vermietung und den Verkauf von
+                  Ein- und Mehrfamilienhäusern, Wohnungen, Grundstücken und
+                  Gewerbeimmobilien. Dabei ist uns der stetige Austausch und das
+                  persönliche Gespräch immer sehr wichtig.
                 </h3>
               </div>
             </div>
