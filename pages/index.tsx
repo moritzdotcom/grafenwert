@@ -38,11 +38,11 @@ export default function Home() {
       </Head>
       <div>
         <header>
-          <div className="w-full sm:max-h-[80vh] overflow-hidden relative">
+          <div className="w-full sm:max-h-[70vh] overflow-hidden relative">
             <Image src={heroImage} alt="Grafenwert" className="w-full" />
             <div className="relative sm:absolute top-0 left-0 w-full h-full bg-none sm:bg-gradient-to-b from-gray-700 via-black to-gray-700 opacity-100 sm:opacity-70 flex justify-center">
               <div className="max-w-screen-lg mx-auto px-3 flex flex-col justify-center gap-3 text-center text-gray-700 sm:text-white">
-                <h1 className="text-3xl sm:text-6xl text-accent sm:text-white">
+                <h1 className="text-2xl sm:text-6xl text-accent sm:text-white">
                   Grafenwert Immobilien
                 </h1>
                 <h2 className="text-xl sm:text-3xl">
@@ -64,7 +64,7 @@ export default function Home() {
         </header>
         <main className="my-9">
           <div className="max-w-screen-lg mx-auto">
-            <h1 className="text-accent text-center text-3xl sm:text-4xl">
+            <h1 className="text-accent text-center text-2xl sm:text-4xl">
               Unsere Leistungen. Für Sie.
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3 mt-5">

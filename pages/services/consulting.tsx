@@ -1,5 +1,6 @@
 import ContactBanner from '@/components/contactBanner';
 import styles from '@/styles/services.module.css';
+import { MdCheckCircle } from 'react-icons/md';
 
 export default function ServicesConsultingPage() {
   return (
@@ -15,13 +16,31 @@ export default function ServicesConsultingPage() {
         </p>
 
         <div className="my-3 text-gray-600">
-          <ul className="list-inside list-disc">
-            <li>ESG (Enviormental, Social, Governance)</li>
-            <li>Mietpreisbremse bzw. Mietanpassungen</li>
-            <li>Energiewende</li>
-            <li>Finanzierung & Versicherung</li>
-            <li>Erbschaft</li>
-            <li>Stay or leave - Analysen</li>
+          <ul className="text-gray-700 mb-8">
+            <li className="flex items-center my-2">
+              <MdCheckCircle className="h-6 w-6 text-accent mr-2 mt-1" />
+              <span>ESG (Environmental, Social, Governance)</span>
+            </li>
+            <li className="flex items-center my-2">
+              <MdCheckCircle className="h-6 w-6 text-accent mr-2 mt-1" />
+              <span>Mietpreisbremse bzw. Mietanpassungen</span>
+            </li>
+            <li className="flex items-center my-2">
+              <MdCheckCircle className="h-6 w-6 text-accent mr-2 mt-1" />
+              <span>Energiewende</span>
+            </li>
+            <li className="flex items-center my-2">
+              <MdCheckCircle className="h-6 w-6 text-accent mr-2 mt-1" />
+              <span>Finanzierung & Versicherung</span>
+            </li>
+            <li className="flex items-center my-2">
+              <MdCheckCircle className="h-6 w-6 text-accent mr-2 mt-1" />
+              <span>Erbschaft</span>
+            </li>
+            <li className="flex items-center my-2">
+              <MdCheckCircle className="h-6 w-6 text-accent mr-2 mt-1" />
+              <span>Stay or leave - Analysen</span>
+            </li>
           </ul>
         </div>
       </main>
