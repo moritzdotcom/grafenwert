@@ -10,7 +10,7 @@ import stayOrLeaveIcon from '../assets/icons/stayOrLeave.png';
 export default function Home() {
   const title = 'Grafenwert Immobilien';
   const description =
-    'Wir für Sie - Wir stehen Ihnen zur Seite, wenn es um Immobilien geht. Zuverlässig, persönlich und kompetent.';
+    'Wir für Sie - Ihr Immobilienmakler in Düsseldorf und Nordrhein-Westfalen. Zuverlässig - persönlich - kompetent.';
   const favicon = '/favicon.ico';
   const metaImage = 'https://www.grafenwert.de/images/hero.jpg';
   const url = 'https://www.grafenwert.de';
@@ -39,8 +39,13 @@ export default function Home() {
       <div>
         <header>
           <div className="w-full sm:max-h-[70vh] overflow-hidden relative">
-            <Image src={heroImage} alt="Grafenwert" className="w-full" />
-            <div className="relative sm:absolute top-0 left-0 w-full h-full bg-none sm:bg-gradient-to-b from-gray-700 via-black to-gray-700 opacity-100 sm:opacity-70 flex justify-center">
+            <Image
+              src={heroImage}
+              alt="Grafenwert"
+              className="w-full"
+              priority
+            />
+            <div className="relative sm:absolute top-0 left-0 w-full h-full bg-none sm:bg-gradient-to-b from-gray-770 via-gray-970 to-gray-770 flex justify-center">
               <div className="max-w-screen-lg mx-auto px-3 flex flex-col justify-center gap-3 text-center text-gray-700 sm:text-white">
                 <h1 className="text-2xl sm:text-6xl text-accent sm:text-white">
                   Grafenwert Immobilien
