@@ -14,5 +14,14 @@ button:disabled {
     -webkit-appearance: none;
     margin: 0;
     -moz-appearance: textfield !important;
+    appearance: textfield !important;
   }
+}
+
+input[type="date"] {
+  display:block;
+  -webkit-appearance: textfield !important;
+  -moz-appearance: textfield !important;
+  appearance: textfield !important;
+  min-height: 1.2em; 
 }
