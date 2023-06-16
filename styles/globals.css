@@ -23,5 +23,6 @@ input[type="date"] {
   -webkit-appearance: textfield !important;
   -moz-appearance: textfield !important;
   appearance: textfield !important;
-  min-height: 1.2em; 
+  min-height: 3em;
+  background: none;
 }
