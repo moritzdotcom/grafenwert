@@ -119,8 +119,7 @@ export default async function handler(
 
   try {
     await sendgrid.send({
-      to: 'moritz.loechner@gmail.com',
-      // to: 'info@grafenwert.de',
+      to: 'info@grafenwert.de',
       from: 'Website Optimierungskampagne <website@grafenwert.de>',
       replyTo: toString(clientEmail),
       subject: `Anfrage zur Optimierung eines Mietvertrages von ${toString(
