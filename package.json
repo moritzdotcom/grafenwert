@@ -15,6 +15,7 @@
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
     "autoprefixer": "10.4.14",
+    "formidable": "^3.3.2",
     "googleapis": "^118.0.0",
     "mapbox-gl": "^2.14.1",
     "mime-types": "^2.1.35",
@@ -30,6 +31,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@types/formidable": "^2.0.6",
     "@types/mime-types": "^2.1.1"
   }
 }

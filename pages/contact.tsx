@@ -195,7 +195,7 @@ export default function ContactPage({
                   Beim versenden Ihrer Nachricht ist leider etwas schief
                   gelaufen. Bitte teilen Sie uns Ihr Anliegen direkt mit einer
                   Mail an
-                  <span className="font-bold mx-1">contact@athome-immo.de</span>
+                  <span className="font-bold mx-1">info@grafenwert.de</span>
                   mit.
                 </div>
               )}
