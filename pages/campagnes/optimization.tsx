@@ -1,7 +1,8 @@
+import InputGroup from '@/components/inputGroup';
 import { isValidEmail } from '@/services/validator';
 import styles from '@/styles/services.module.css';
 import Head from 'next/head';
-import { HTMLInputTypeAttribute, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type ErrorObject = {
   clientCompanyName?: string;
@@ -15,39 +16,6 @@ type ErrorObject = {
   rentUntil?: string;
   privacy?: string;
 };
-
-function InputGroup({
-  id,
-  label,
-  type = 'text',
-  value,
-  onChange,
-  error,
-}: {
-  id?: string;
-  label?: string;
-  type?: HTMLInputTypeAttribute;
-  value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  error?: string;
-}) {
-  return (
-    <div className="flex-1 flex flex-col">
-      <label htmlFor={id} className="text-gray-700">
-        {label}
-      </label>
-      <input
-        type={type}
-        name={id}
-        id={id}
-        value={value}
-        onChange={onChange}
-        className="p-2 border-gray-200 border-2 rounded-md outline-none text-accent"
-      />
-      {error && <p className="text-red-500 text-sm">{error}</p>}
-    </div>
-  );
-}
 
 export default function OptimizationCampagne() {
   const [clientCompanyName, setClientCompanyName] = useState('');
@@ -75,6 +43,7 @@ export default function OptimizationCampagne() {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
   const [errors, setErrors] = useState<ErrorObject>({});
+  const [formWasSubmitted, setFormWasSubmitted] = useState(false);
 
   const validate = () => {
     const tmpErrors: ErrorObject = {};
@@ -127,6 +96,7 @@ export default function OptimizationCampagne() {
     e.preventDefault();
     setLoading(true);
     const valid = validate();
+    setFormWasSubmitted(true);
     if (!valid) return setLoading(false);
 
     const formData = new FormData();
@@ -179,6 +149,22 @@ export default function OptimizationCampagne() {
     }
     setLoading(false);
   };
+
+  useEffect(() => {
+    if (!formWasSubmitted) return;
+    validate();
+  }, [
+    clientCompanyName,
+    clientName,
+    clientAddress,
+    clientEmail,
+    landLordCompanyName,
+    rent,
+    size,
+    rentFrom,
+    rentUntil,
+    privacy,
+  ]);
 
   return (
     <>
@@ -308,50 +294,24 @@ export default function OptimizationCampagne() {
             </h3>
             <div className="flex flex-col gap-3">
               <div className="flex flex-col sm:flex-row gap-3">
-                <div className="flex-1 flex flex-col">
-                  <label htmlFor="rent" className="text-gray-700">
-                    Netto-Kaltmiete*
-                  </label>
-                  <div className="w-full border-2 border-gray-200 rounded-md flex justify-center items-center gap-2">
-                    <input
-                      value={rent}
-                      onChange={(e) => setRent(e.target.value)}
-                      className="text-accent px-2 focus:outline-0 w-full"
-                      type="number"
-                      inputMode="numeric"
-                      name="rent"
-                      id="rent"
-                    />
-                    <div className="border-l-2 border-gray-200 px-3 py-1.5 text-gray-500 text-lg">
-                      €
-                    </div>
-                  </div>
-                  {errors.rent && (
-                    <p className="text-red-500 text-sm">{errors.rent}</p>
-                  )}
-                </div>
-                <div className="flex-1 flex flex-col">
-                  <label htmlFor="size" className="text-gray-700">
-                    m<sup>2</sup>-Zahl*
-                  </label>
-                  <div className="w-full border-2 border-gray-200 rounded-md flex justify-center items-center gap-2">
-                    <input
-                      value={size}
-                      onChange={(e) => setSize(e.target.value)}
-                      className="text-accent px-2 focus:outline-0 w-full"
-                      type="number"
-                      inputMode="numeric"
-                      name="size"
-                      id="size"
-                    />
-                    <div className="border-l-2 border-gray-200 px-3 py-1.5 text-gray-500 text-lg">
-                      m<sup>2</sup>
-                    </div>
-                  </div>
-                  {errors.size && (
-                    <p className="text-red-500 text-sm">{errors.size}</p>
-                  )}
-                </div>
+                <InputGroup
+                  id="rent"
+                  type="number"
+                  label="Netto-Kaltmiete*"
+                  value={rent}
+                  onChange={(e) => setRent(e.target.value)}
+                  error={errors.rent}
+                  suffix="€"
+                />
+                <InputGroup
+                  id="size"
+                  type="number"
+                  label="m²-Zahl*"
+                  value={size}
+                  onChange={(e) => setSize(e.target.value)}
+                  error={errors.size}
+                  suffix="m²"
+                />
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <InputGroup
@@ -371,7 +331,7 @@ export default function OptimizationCampagne() {
                   error={errors.rentUntil}
                 />
               </div>
-              <div className="mt-1 grid grid-cols-[1rem_1fr] items-center gap-2">
+              <div className="mt-1 grid grid-cols-[20px_1fr] items-center gap-2">
                 <input
                   type="checkbox"
                   id="rentIndexed"
@@ -402,12 +362,13 @@ export default function OptimizationCampagne() {
                 id="attachment"
               />
             </div>
-            <div className="mt-5 grid grid-cols-[1rem_1fr] items-center gap-2">
+            <div className="mt-5 grid grid-cols-[20px_1fr] items-start gap-2">
               <input
                 type="checkbox"
                 id="privacy"
                 checked={privacy}
                 onChange={(e) => setPrivacy(e.target.checked)}
+                className="mt-1.5"
               />
               <label htmlFor="privacy" className="text-gray-700 cursor-pointer">
                 Ich habe die
