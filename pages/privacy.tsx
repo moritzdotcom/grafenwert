@@ -55,7 +55,7 @@ export default function PrivacyPage() {
           Liste der Datenschutzbeauftragten sowie deren Kontaktdaten bereit:
           <br />
           <a
-            className="text-accent"
+            className="text-accent break-all"
             href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
           >
             https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html

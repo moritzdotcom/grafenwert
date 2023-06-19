@@ -13,6 +13,7 @@ type ErrorObject = {
   size?: string;
   rentFrom?: string;
   rentUntil?: string;
+  privacy?: string;
 };
 
 function InputGroup({
@@ -68,6 +69,7 @@ export default function OptimizationCampagne() {
   const [rentIndexed, setRentIndexed] = useState(false);
 
   const [attachment, setAttachment] = useState<File>();
+  const [privacy, setPrivacy] = useState(false);
 
   const [loading, setLoading] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
@@ -112,6 +114,9 @@ export default function OptimizationCampagne() {
     }
     if (new Date(rentFrom) > new Date(rentUntil)) {
       tmpErrors.rentFrom = 'Muss vor dem Enddatum liegen';
+    }
+    if (!privacy) {
+      tmpErrors.privacy = 'Bitte akzeptieren Sie die Datenschutzerklärung';
     }
 
     setErrors(tmpErrors);
@@ -369,12 +374,12 @@ export default function OptimizationCampagne() {
               <div className="mt-1 grid grid-cols-[1rem_1fr] items-center gap-2">
                 <input
                   type="checkbox"
-                  id="privacy"
+                  id="rentIndexed"
                   checked={rentIndexed}
                   onChange={(e) => setRentIndexed(e.target.checked)}
                 />
                 <label
-                  htmlFor="privacy"
+                  htmlFor="rentIndexed"
                   className="text-gray-700 cursor-pointer"
                 >
                   Ist Ihre Miete indexiert?
@@ -397,6 +402,29 @@ export default function OptimizationCampagne() {
                 id="attachment"
               />
             </div>
+            <div className="mt-5 grid grid-cols-[1rem_1fr] items-center gap-2">
+              <input
+                type="checkbox"
+                id="privacy"
+                checked={privacy}
+                onChange={(e) => setPrivacy(e.target.checked)}
+              />
+              <label htmlFor="privacy" className="text-gray-700 cursor-pointer">
+                Ich habe die
+                <a
+                  href="/privacy"
+                  target="_blank"
+                  className="text-accent mx-1 underline"
+                >
+                  Datenschutzerklärung
+                </a>
+                gelesen und bin mit der Verarbeitung meiner Daten
+                einverstanden.*
+              </label>
+            </div>
+            {errors.privacy && (
+              <p className="text-red-500 text-sm">{errors.privacy}</p>
+            )}
             <div className="flex justify-end mt-5">
               <button
                 type="submit"
