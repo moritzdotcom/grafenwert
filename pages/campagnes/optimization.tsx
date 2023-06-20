@@ -169,15 +169,25 @@ export default function OptimizationCampagne() {
   return (
     <>
       <Head>
-        <title>Grafenwert - Wir senken Ihre Mietkosten für Ihr Büro</title>
+        <title>Grafenwert - Wir senken die Mietkosten für Ihr Büro</title>
         <meta name="description" content="Wir optimieren Ihren Mietvertrag" />
       </Head>
-      <main className="max-w-screen-xl mx-auto p-3 md:p-6 min-h-[84vh]">
+      <main className="max-w-screen-lg mx-auto p-3 md:p-6 min-h-[84vh]">
         <h1 className={styles.heading}>
-          Wir senken Ihre Mietkosten für Ihr Büro
+          Wir senken die Mietkosten für Ihr Büro
         </h1>
-        <h2 className="text-center text-gray-700">
-          Wir optimieren Ihren Mietvertrag
+        <h2 className="text-justify text-gray-700">
+          Wir von Grafenwert-Immobilien analysieren und optimieren den
+          Mietvertrag für Ihre Bürofläche. Unsere Leistung ist für Sie
+          kostenfrei, da wir 100% Erfolgsabhängig arbeiten.
+          <br />
+          <br />
+          Geben Sie hier Ihre Kontaktdaten ein und wir rufen Sie innerhalb von
+          24h zurück.
+          <br />
+          <br />
+          Wenn Sie Ihren Mietvertrag als PDF-Datei vorliegen haben, können Sie
+          den auch ganz einfach auf dieser Seite hochladen.
         </h2>
         {showSuccessMessage && (
           <div
@@ -200,10 +210,7 @@ export default function OptimizationCampagne() {
           </div>
         )}
         {!(showSuccessMessage || showFailureMessage) && (
-          <form
-            className="max-w-screen-lg mx-auto mt-5"
-            onSubmit={handleSubmit}
-          >
+          <form className="w-full mt-5" onSubmit={handleSubmit}>
             <h3 className="text-accent text-lg font-semibold mt-5">
               Ihre Kontaktdaten
             </h3>
@@ -331,19 +338,32 @@ export default function OptimizationCampagne() {
                   error={errors.rentUntil}
                 />
               </div>
-              <div className="mt-1 grid grid-cols-[20px_1fr] items-center gap-2">
-                <input
-                  type="checkbox"
-                  id="rentIndexed"
-                  checked={rentIndexed}
-                  onChange={(e) => setRentIndexed(e.target.checked)}
-                />
-                <label
-                  htmlFor="rentIndexed"
-                  className="text-gray-700 cursor-pointer"
-                >
+              <div className="mt-2">
+                <p className="text-gray-700 cursor-pointer">
                   Ist Ihre Miete indexiert?
-                </label>
+                </p>
+                <div className="flex gap-3">
+                  <div className="flex items-center gap-1">
+                    <input
+                      type="radio"
+                      id="rentIndexed"
+                      name="rentIndexed"
+                      checked={rentIndexed}
+                      onChange={() => setRentIndexed(true)}
+                    />
+                    <label htmlFor="rentIndexed">Ja</label>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <input
+                      type="radio"
+                      id="rentNotIndexed"
+                      name="rentIndexed"
+                      checked={!rentIndexed}
+                      onChange={() => setRentIndexed(false)}
+                    />
+                    <label htmlFor="rentNotIndexed">Nein</label>
+                  </div>
+                </div>
               </div>
             </div>
             <h3 className="text-accent text-lg font-semibold mt-5">
