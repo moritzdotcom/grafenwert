@@ -162,12 +162,17 @@ export default function Home() {
                     <h5 className="text-accent text-lg">
                       Stay or leave Analysen
                     </h5>
-                    Wenn Sie vor der Entscheidung stehen, eine Immobilie zu
-                    behalten oder zu veräußern, bieten wir Ihnen umfassende
-                    Analysen und Beratung. Wir bewerten die Wertentwicklung
-                    Ihrer Immobilie, berücksichtigen Markttrends und
-                    unterstützen Sie dabei, eine fundierte Entscheidung zu
-                    treffen.
+                    Unsere Stay-or-Leave-Analysen bieten Gewerbemietern eine
+                    umfassende Unterstützung bei der Optimierung ihres
+                    Mietvertrags oder der Suche nach einer alternativen
+                    Immobilie. Bei dieser professionellen Dienstleistung
+                    analysieren wir sorgfältig den bestehenden Mietvertrag, um
+                    Möglichkeiten zur Optimierung der Vertragsbedingungen wie
+                    Laufzeit, Verhandlungen, vorzeitige Verlängerung oder
+                    Beendigung zu identifizieren. Falls eine Beendigung des
+                    aktuellen Mietvertrags erwünscht ist, helfen wir unseren
+                    Kunden aktiv bei der Suche nach einer geeigneten
+                    Alternative.
                   </div>
                 </div>
               </div>
