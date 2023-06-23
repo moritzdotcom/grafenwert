@@ -25,6 +25,7 @@ export default function ServicesBrokeragePage({
         <div className="flex flex-col md:flex-row gap-5 my-3 text-gray-600">
           <div className="bg-gray-100 rounded p-3 w-full flex flex-col gap-3">
             <h2 className={`${styles.subheading} text-center`}>Vermietung</h2>
+            <div className="w-2/3 border-t border-gray-500 mx-auto" />
             <div>
               <h3 className="font-semibold">Gewerbevermietung:</h3>
               <ul className="list-inside list-disc">
@@ -44,6 +45,7 @@ export default function ServicesBrokeragePage({
 
           <div className="bg-gray-100 rounded p-3 w-full flex flex-col gap-3">
             <h2 className={`${styles.subheading} text-center`}>Verkauf</h2>
+            <div className="w-2/3 border-t border-gray-500 mx-auto" />
             <div>
               <h3 className="font-semibold">Gewerbe:</h3>
               <ul className="list-inside list-disc">
