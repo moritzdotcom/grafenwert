@@ -17,7 +17,7 @@ export default function ImprintPage() {
         <p>Graf-Adolf-Platz 12</p>
         <p>40213 Düsseldorf</p>
         <br />
-        <p>Telefon (Zentrale): +49 152 286 880 82</p>
+        <p>Telefon (Zentrale): +49 211 468 277-65</p>
         {/* <p>Fax: (0211) 522 884 29</p> */}
         <p>E-Mail: info@grafenwert.de</p>
         <br />
