@@ -94,10 +94,10 @@ export default function OptimizationCampagne() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true);
     const valid = validate();
     setFormWasSubmitted(true);
-    if (!valid) return setLoading(false);
+    if (!valid) return;
+    setLoading(true);
 
     const formData = new FormData();
     if (attachment) formData.append('attachment', attachment);
@@ -117,7 +117,6 @@ export default function OptimizationCampagne() {
       rentFrom,
       rentUntil,
       rentIndexed,
-      attachment,
     })
       .filter(([_, v]) => v !== undefined)
       .forEach(([key, value]) =>
