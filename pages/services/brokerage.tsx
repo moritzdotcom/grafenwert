@@ -1,13 +1,7 @@
 import ContactBanner from '@/components/contactBanner';
 import styles from '@/styles/services.module.css';
-import { google } from 'googleapis';
-import { GetServerSidePropsContext } from 'next';
 
-export default function ServicesBrokeragePage({
-  videoUrl,
-}: {
-  videoUrl?: string;
-}) {
+export default function ServicesBrokeragePage() {
   return (
     <>
       <main className={styles.container}>
@@ -71,27 +65,6 @@ export default function ServicesBrokeragePage({
             </div>
           </div>
         </div>
-
-        {videoUrl && (
-          <div className="my-5 mx-auto w-full max-w-3xl">
-            <h2 className={styles.subheading}>
-              Unsere aktuellen Immobilienangebote
-            </h2>
-            <p className="text-gray-600 mb-3">
-              Auf unserem YouTube Kanal finden Sie aktuelle Immobilienangebote
-              in hochwertigen Videos aufbereitet.
-            </p>
-            <iframe
-              width="100%"
-              className="aspect-video"
-              src={videoUrl}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
-        )}
       </main>
       <ContactBanner
         ctaText="Haben Sie Interesse an diesem Angebot?"
@@ -99,41 +72,4 @@ export default function ServicesBrokeragePage({
       />
     </>
   );
-}
-
-export async function getServerSideProps({ res }: GetServerSidePropsContext) {
-  res.setHeader('Cache-Control', 'public, s-maxage=7200');
-  try {
-    const apiKey = process.env.GMAPS_API_KEY; // Set your YouTube API key here
-    const channelId = 'UCkWbvm5EepFZ57UFqn9e0mw'; // Replace with your actual channel ID
-
-    // Create the YouTube Data API client
-    const youtube = google.youtube({
-      version: 'v3',
-      auth: apiKey,
-    });
-
-    // Retrieve the latest video from the channel
-    const searchResponse = await youtube.search.list({
-      part: ['snippet'],
-      channelId: channelId,
-      order: 'date',
-      maxResults: 1,
-    });
-
-    if (!searchResponse?.data?.items) return { props: {} };
-    const latestVideo = searchResponse.data.items[0];
-
-    if (!latestVideo?.id) return { props: {} };
-
-    // Get the video details
-    const videoId = latestVideo.id.videoId;
-    const videoUrl = `https://www.youtube.com/embed/${videoId}`;
-
-    // Send the video details as the API response
-    return { props: { videoUrl } };
-  } catch (error) {
-    console.error('Error retrieving latest video:', error);
-    return { props: {} };
-  }
 }

@@ -2,12 +2,14 @@ import ServiceCard from '@/components/serviceCard';
 import Head from 'next/head';
 import Image from 'next/image';
 import heroImage from '../public/images/hero.jpg';
-import environmentIcon from '../assets/icons/environment.png';
-import inheritanceIcon from '../assets/icons/inheritance.png';
-import rentAdjustmentsIcon from '../assets/icons/rentAdjustments.png';
-import stayOrLeaveIcon from '../assets/icons/stayOrLeave.png';
+import RLImage from '../public/images/people/RL.jpg';
+import SZImage from '../public/images/people/SZ.jpg';
+import { GetServerSidePropsContext } from 'next/types';
+import { google } from 'googleapis';
+import Link from 'next/link';
+import { BsArrowRight } from 'react-icons/bs';
 
-export default function Home() {
+export default function Home({ videoUrls }: { videoUrls?: string[] }) {
   const title = 'Grafenwert Immobilien';
   const description =
     'Wir für Sie - Ihr Immobilienmakler in Düsseldorf und Nordrhein-Westfalen. Zuverlässig - persönlich - kompetent.';
@@ -50,12 +52,10 @@ export default function Home() {
                 <h1 className="text-2xl sm:text-6xl text-accent sm:text-white">
                   Grafenwert Immobilien
                 </h1>
-                <h2 className="text-xl sm:text-3xl">
+                <h2 className="text-xl sm:text-3xl mb-3">
                   Ihr Immobilienmakler in Düsseldorf und Nordrhein-Westfalen
-                  <br />
-                  Zuverlässig - persönlich - kompetent
                 </h2>
-                <h3 className="text-justify sm:text-center">
+                <h3 className="text-justify sm:text-center text-lg">
                   Grafenwert Immobilien ist ein eigentümergeführtes
                   Beratungsunternehmen, mit langjähriger Erfahrung im Bereich
                   Investments und Immobilien. Verwurzelt in Düsseldorf beraten
@@ -71,125 +71,151 @@ export default function Home() {
           </div>
         </header>
         <main className="my-9">
-          <div className="max-w-screen-lg mx-auto">
-            <h1 className="text-accent text-center text-2xl sm:text-4xl">
-              Unsere Leistungen. Für Sie.
-            </h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3 mt-5">
-              <ServiceCard
-                href="/services/brokerage"
-                title="Vermittlung"
-                text="Wir vermitteln Immobilien aller Art. Von der Eigentumswohnung bis hin zum Mehrfamilienhaus. Wir sind Ihr Ansprechpartner, wenn es um die Vermittlung von Immobilien geht."
-                imageUrl="/images/services/brokerage.jpg"
-              />
-              <ServiceCard
-                href="/services/consulting"
-                title="Beratung"
-                text="Wir beraten Sie in allen Fragen rund um Immobilien. Von der Finanzierung bis hin zur Immobilienbewertung. Wir sind Ihr Ansprechpartner, wenn es um die Beratung von Immobilien geht."
-                imageUrl="/images/services/consulting.jpg"
-              />
-              <ServiceCard
-                href="/services/management"
-                title="Hausverwaltung"
-                text="Wir verwalten Immobilien aller Art. Von der Eigentumswohnung bis hin zum Mehrfamilienhaus. Wir sind Ihr Ansprechpartner, wenn es um die Verwaltung von Immobilien geht."
-                imageUrl="/images/services/management.jpg"
-              />
-              <ServiceCard
-                href="/services/financing"
-                title="Finanzierung"
-                text="Wir investieren in Immobilien aller Art. Von der Eigentumswohnung bis hin zum Mehrfamilienhaus. Wir sind Ihr Ansprechpartner, wenn es um die Investition in Immobilien geht."
-                imageUrl="/images/services/financing.jpg"
-              />
+          <h1 className="text-accent text-center text-2xl sm:text-4xl">
+            Zuverlässig - persönlich - kompetent
+          </h1>
+          <div className="my-5 max-w-screen-lg mx-auto px-3">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 items-center justify-center">
+              <div className="flex-1">
+                <Image
+                  src={RLImage}
+                  alt="RL"
+                  className="w-full object-cover rounded-lg"
+                />
+                <p className="text-lg text-center text-gray-700">
+                  Reinhard Löchner (Geschäftsführer)
+                </p>
+              </div>
+              <div className="flex-1">
+                <Image
+                  src={SZImage}
+                  alt="SZ"
+                  className="w-full object-cover rounded-lg"
+                />
+                <p className="text-lg text-center text-gray-700">
+                  Sam Zahiri (Geschäftsführer)
+                </p>
+              </div>
+            </div>
+            <Link
+              href="/about"
+              className="w-full max-w-screen-lg mx-auto mt-3 p-3 text-white bg-accent rounded-lg flex items-center justify-center gap-2 text-lg sm:text-xl"
+            >
+              Mehr über uns <BsArrowRight className="text-xl" />
+            </Link>
+          </div>
+          <div className="bg-gray-200 py-5 mt-10">
+            <div className="max-w-screen-lg mx-auto">
+              <h1 className="text-accent text-center text-2xl sm:text-4xl">
+                Wir stehen Ihnen zur Seite.
+              </h1>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3">
+                <ServiceCard
+                  href="/services#brokerage"
+                  title="Vermittlung"
+                  text="Wir vermieten und verkaufen Ein- und Mehrfamilienhäuser, Wohnungen, Grundstücke und Gewerbeimmobilien. Vor dem Verkauf bieten wir unseren Kunden eine individuelle Bewertung an."
+                  imageUrl="/images/services/brokerage.jpg"
+                />
+                <ServiceCard
+                  href="/services#consulting"
+                  title="Beratung"
+                  text="Wir beraten Sie in allen Fragen rund um Ihre Immobilien. Von der Mietanpassung über Stay or Leave Analysen, in Erbschaftsfragen oder bei Fragen der Nachhaltigkeit (ESG)."
+                  imageUrl="/images/services/consulting.jpg"
+                />
+                <ServiceCard
+                  href="/services#management"
+                  title="Hausverwaltung"
+                  text="Wir verwalten Immobilien aller Art. Von der Eigentumswohnung bis hin zum Mehrfamilienhaus. Wir sind Ihr Ansprechpartner, wenn es um die Verwaltung von Immobilien geht."
+                  imageUrl="/images/services/management.jpg"
+                />
+                <ServiceCard
+                  href="/services#financing"
+                  title="Finanzierung"
+                  text="Wir investieren in Immobilien aller Art. Von der Eigentumswohnung bis hin zum Mehrfamilienhaus. Wir sind Ihr Ansprechpartner, wenn es um die Investition in Immobilien geht."
+                  imageUrl="/images/services/financing.jpg"
+                />
+              </div>
             </div>
           </div>
-          <div className="bg-gray-200 py-5 my-5">
-            <h1 className="text-accent text-center text-3xl sm:text-4xl mb-9">
-              Wer wir sind
-            </h1>
-            <div className="max-w-screen-lg mx-auto px-3 text-gray-700 flex flex-col">
-              <p>
-                Grafenwert Immobilien ist ein Zusammenschluss von Löchner
-                Capital und Sam Zahiri (ehemals Colliers International AG und
-                Graefer Immobilien). Unser Ziel ist es, Ihnen die bestmögliche
-                Beratung in einer immer komplexer werdenden Immobilienwelt zu
-                bieten. Unser Leistungsspektrum umfasst verschiedene Bereiche,
-                um Sie ganzheitlich bei Ihren Immobilienangelegenheiten zu
-                unterstützen. Hier sind einige unserer Schwerpunkte:
-              </p>
-              <div className="my-3 flex flex-col gap-3">
-                <div className="flex gap-3 sm:gap-5 items-center flex-col sm:flex-row">
-                  <Image src={environmentIcon} alt="ESG" width={70} />
-                  <div>
-                    <h5 className="text-accent text-lg">
-                      ESG (Environmental, Social, and Governance)
-                    </h5>
-                    Wir beraten Sie bei Fragen der Nachhaltigkeit und
-                    unterstützen Sie dabei, umweltfreundliche und sozial
-                    verantwortungsbewusste Immobilieninvestitionen zu tätigen.
-                    Wir helfen Ihnen, nachhaltige Immobilienprojekte zu
-                    identifizieren und umzusetzen.
-                  </div>
-                </div>
-                <div className="flex gap-3 sm:gap-5 items-center flex-col sm:flex-row">
-                  <Image src={inheritanceIcon} alt="Erbschaft" width={70} />
-                  <div>
-                    <h5 className="text-accent text-lg">Erbschaft</h5>
-                    Wenn Sie eine Immobilie erben oder vererben möchten, stehen
-                    wir Ihnen mit unserer Expertise zur Seite. Wir unterstützen
-                    Sie bei der Bewertung der Immobilie, der Klärung rechtlicher
-                    Aspekte und der Durchführung eines reibungslosen
-                    Übergabeprozesses.
-                  </div>
-                </div>
-                <div className="flex gap-3 sm:gap-5 items-center flex-col sm:flex-row">
-                  <Image
-                    src={rentAdjustmentsIcon}
-                    alt="Mietanpassungen"
-                    width={70}
-                  />
-                  <div>
-                    <h5 className="text-accent text-lg">Mietanpassungen</h5>
-                    Bei Mietanpassungen helfen wir Ihnen, angemessene und faire
-                    Mietpreise festzulegen. Wir analysieren den aktuellen
-                    Immobilienmarkt und berücksichtigen lokale Gegebenheiten, um
-                    eine optimale Mietstrategie für Ihre Immobilie zu
-                    entwickeln.
-                  </div>
-                </div>
-                <div className="flex gap-3 sm:gap-5 items-center flex-col sm:flex-row">
-                  <Image src={stayOrLeaveIcon} alt="StayOrLeave" width={70} />
-                  <div>
-                    <h5 className="text-accent text-lg">
-                      Stay or leave Analysen
-                    </h5>
-                    Unsere Stay-or-Leave-Analysen bieten Gewerbemietern eine
-                    umfassende Unterstützung bei der Optimierung ihres
-                    Mietvertrags oder der Suche nach einer alternativen
-                    Immobilie. Bei dieser professionellen Dienstleistung
-                    analysieren wir sorgfältig den bestehenden Mietvertrag, um
-                    Möglichkeiten zur Optimierung der Vertragsbedingungen wie
-                    Laufzeit, Verhandlungen, vorzeitige Verlängerung oder
-                    Beendigung zu identifizieren. Falls eine Beendigung des
-                    aktuellen Mietvertrags erwünscht ist, helfen wir unseren
-                    Kunden aktiv bei der Suche nach einer geeigneten
-                    Alternative.
-                  </div>
-                </div>
+          {videoUrls && videoUrls.length > 0 && (
+            <div className="my-5 mx-auto w-full max-w-screen-lg">
+              <h1 className="text-accent text-center text-2xl sm:text-4xl">
+                Unsere aktuellen Immobilienangebote
+              </h1>
+              <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3 p-3">
+                {videoUrls.map((videoUrl) => (
+                  <iframe
+                    key={videoUrl}
+                    width="100%"
+                    className="aspect-video"
+                    src={videoUrl}
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
+                ))}
               </div>
-              <p>
-                Darüber hinaus stehen wir Ihnen bei der Vermittlung, Verwaltung
-                und Finanzierung von Immobilien zur Seite. Unser Team aus
-                erfahrenen Experten arbeitet eng mit Ihnen zusammen, um
-                maßgeschneiderte Lösungen für Ihre individuellen Anforderungen
-                zu entwickeln. Kontaktieren Sie uns gerne, um weitere
-                Informationen zu erhalten oder um einen Beratungstermin zu
-                vereinbaren. Wir freuen uns darauf, Ihnen bei Ihren
-                Immobilienangelegenheiten behilflich zu sein.
+            </div>
+          )}
+          <div className="bg-gray-200 py-5 mt-10">
+            <div className="max-w-screen-lg mx-auto">
+              <h1 className="text-accent text-center text-2xl sm:text-4xl">
+                Kostenlose Immobilienbewertung anfordern
+              </h1>
+              <p className="text-center text-lg sm:text-xl text-gray-700 mt-3">
+                Mit unserem Immobilienbewertungstool können Sie den Wert Ihrer
+                Immobilie schnell und einfach ermitteln.
               </p>
+              <Link
+                href="/services/evaluation"
+                className="block w-full max-w-sm mx-auto my-5 p-3 text-center text-white bg-accent rounded-lg text-lg sm:text-xl"
+              >
+                Immobilienbewertung anfordern
+              </Link>
             </div>
           </div>
         </main>
       </div>
     </>
   );
+}
+
+export async function getServerSideProps({ res }: GetServerSidePropsContext) {
+  res.setHeader('Cache-Control', 'public, s-maxage=7200');
+  try {
+    const apiKey = process.env.GMAPS_API_KEY; // Set your YouTube API key here
+    const channelId = 'UCkWbvm5EepFZ57UFqn9e0mw'; // Replace with your actual channel ID
+
+    // Create the YouTube Data API client
+    const youtube = google.youtube({
+      version: 'v3',
+      auth: apiKey,
+    });
+
+    // Retrieve the latest video from the channel
+    const searchResponse = await youtube.search.list({
+      part: ['snippet'],
+      channelId: channelId,
+      order: 'date',
+      maxResults: 2,
+    });
+
+    if (!searchResponse?.data?.items) return { props: {} };
+    const videos = searchResponse.data.items;
+
+    if (videos.length === 0) return { props: {} };
+
+    // Get the video details
+    const videoIds = videos.map(({ id }) => id?.videoId);
+    const videoUrls = videoIds.map(
+      (id) => `https://www.youtube.com/embed/${id}`
+    );
+    console.log(videoUrls);
+
+    // Send the video details as the API response
+    return { props: { videoUrls } };
+  } catch (error) {
+    console.error('Error retrieving latest video:', error);
+    return { props: {} };
+  }
 }

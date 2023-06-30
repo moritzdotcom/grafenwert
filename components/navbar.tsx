@@ -30,19 +30,19 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
           isOpen ? 'max-h-96 py-2' : 'max-h-0 overflow-hidden'
         } transition-all flex flex-col gap-2 -mt-1 -mx-2 px-5 bg-gray-400`}
       >
-        <Link onClick={closeAll} href="/services/brokerage">
+        <Link onClick={closeAll} href="/services#brokerage">
           Vermittlung
         </Link>
         <div className="w-full bg-accent h-[1px]" />
-        <Link onClick={closeAll} href="/services/consulting">
+        <Link onClick={closeAll} href="/services#consulting">
           Beratung
         </Link>
         <div className="w-full bg-accent h-[1px]" />
-        <Link onClick={closeAll} href="/services/management">
+        <Link onClick={closeAll} href="/services#management">
           Hausverwaltung
         </Link>
         <div className="w-full bg-accent h-[1px]" />
-        <Link onClick={closeAll} href="/services/financing">
+        <Link onClick={closeAll} href="/services#financing">
           Finanzierung
         </Link>
         <div className="w-full bg-accent h-[1px]" />
@@ -108,19 +108,19 @@ export default function Navbar() {
                 isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
               }`}
             >
-              <Link onClick={toggle} href="/services/brokerage">
+              <Link onClick={toggle} href="/services#brokerage">
                 Vermittlung
               </Link>
               <div className="w-full bg-accent h-[1px]" />
-              <Link onClick={toggle} href="/services/consulting">
+              <Link onClick={toggle} href="/services#consulting">
                 Beratung
               </Link>
               <div className="w-full bg-accent h-[1px]" />
-              <Link onClick={toggle} href="/services/management">
+              <Link onClick={toggle} href="/services#management">
                 Hausverwaltung
               </Link>
               <div className="w-full bg-accent h-[1px]" />
-              <Link onClick={toggle} href="/services/financing">
+              <Link onClick={toggle} href="/services#financing">
                 Finanzierung
               </Link>
               <div className="w-full bg-accent h-[1px]" />

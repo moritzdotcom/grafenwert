@@ -21,35 +21,35 @@ export default function Footer() {
           <Link
             href="https://instagram.com/grafenwert"
             target="_blank"
-            className="hover:text-accent"
+            className="hover:text-accent text-xl"
           >
             <BsInstagram />
           </Link>
           <Link
             href="https://www.tiktok.com/@grafenwert"
             target="_blank"
-            className="hover:text-accent"
+            className="hover:text-accent text-xl"
           >
             <FaTiktok />
           </Link>
           <Link
             href="https://www.linkedin.com/company/grafenwert"
             target="_blank"
-            className="hover:text-accent"
+            className="hover:text-accent text-xl"
           >
             <BsLinkedin />
           </Link>
           <Link
             href="https://www.facebook.com/grafenwert"
             target="_blank"
-            className="hover:text-accent"
+            className="hover:text-accent text-xl"
           >
             <BsFacebook />
           </Link>
           <Link
             href="https://www.youtube.com/@Grafenwert-Immobilien"
             target="_blank"
-            className="hover:text-accent"
+            className="hover:text-accent text-xl"
           >
             <BsYoutube />
           </Link>
