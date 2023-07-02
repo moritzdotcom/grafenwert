@@ -62,9 +62,8 @@ export default function Home({ videoUrls }: { videoUrls?: string[] }) {
                   wir Mandanten für Immobilien in ganz Nordrhein-Westfalen.
                   <br />
                   Unsere Expertise umfasst die Vermietung und den Verkauf von
-                  Ein- und Mehrfamilienhäusern, Wohnungen, Grundstücken und
-                  Gewerbeimmobilien. Dabei ist uns der stetige Austausch und das
-                  persönliche Gespräch immer sehr wichtig.
+                  Wohn- und Gewerbeimmobilien. Dabei ist uns der stetige
+                  Austausch und das persönliche Gespräch immer sehr wichtig.
                 </h3>
               </div>
             </div>
