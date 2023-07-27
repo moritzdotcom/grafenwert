@@ -24,7 +24,7 @@ export default function ImprintPage() {
         <p>Geschäftsführung:</p>
         <p>Sam Zahiri, Reinhard Löchner</p>
         <br />
-        {/* TODO: <p>Umsatzsteuer. Ident-Nr.: DE 27 76 19 723</p> */}
+        <p>Steuer-Nr.: 105/5817/5517</p>
         <p>Handelsregister: Amtsgericht Düsseldorf HRB 100615</p>
       </main>
     </>
