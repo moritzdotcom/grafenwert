@@ -281,6 +281,9 @@ function ContactForm() {
           sizeFrom,
           sizeTo,
         }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
         method: 'POST',
       });
 
