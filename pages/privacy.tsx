@@ -4,7 +4,7 @@ export default function PrivacyPage() {
   return (
     <>
       <Head>
-        <title>AtHome - Datenschutz</title>
+        <title>Grafenwert - Datenschutz</title>
       </Head>
       <main className="max-w-screen-lg mx-auto px-5 min-h-[70vh] mb-3">
         <h1 className="text-2xl text-center mt-5">Datenschutzerklärung</h1>
