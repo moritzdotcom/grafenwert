@@ -5,17 +5,26 @@ import SZImage from '@/public/images/people/SZ.jpg';
 import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs';
 import ServiceCard from '@/components/serviceCard';
-import { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ContactForm from '@/components/contactForm';
 
 const imageNames = [
   'bank',
   'medical',
-  'office',
   'production',
+  'office',
   'restaurant',
   'shop',
 ];
+
+const imageNameLookup: { [key: string]: string } = {
+  bank: 'Bürogebäude',
+  medical: 'Praxen',
+  production: 'Produktionsstätten',
+  office: 'Bürogebäude',
+  restaurant: 'Gastronomie',
+  shop: 'Einzelhandel',
+};
 
 export default function CommercialSpecialistCampagne() {
   const title = 'Grafenwert Immobilien';
@@ -26,28 +35,15 @@ export default function CommercialSpecialistCampagne() {
   const url = 'https://www.grafenwert.de';
 
   const [imageName, setImageName] = useState(imageNames[0]);
-  const [nextImageName, setNextImageName] = useState(imageNames[1]);
-  const [inTransition, setInTransition] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setInTransition(true);
-      setTimeout(() => {
-        const index = imageNames.indexOf(imageName);
-        if (index < imageNames.length - 1) {
-          setImageName(imageNames[index + 1]);
-        } else {
-          setImageName(imageNames[0]);
-        }
-        if (index < imageNames.length - 2) {
-          setNextImageName(imageNames[index + 2]);
-        } else if (index < imageNames.length - 1) {
-          setNextImageName(imageNames[0]);
-        } else {
-          setNextImageName(imageNames[1]);
-        }
-        setInTransition(false);
-      }, 1000);
+      const index = imageNames.indexOf(imageName);
+      if (index < imageNames.length - 1) {
+        setImageName(imageNames[index + 1]);
+      } else {
+        setImageName(imageNames[0]);
+      }
     }, 5000);
     return () => clearInterval(interval);
   }, [imageName]);
@@ -91,8 +87,8 @@ export default function CommercialSpecialistCampagne() {
                 }`}
               />
             ))}
-            <div className="relative sm:absolute top-0 left-0 w-full h-full bg-none sm:bg-gradient-to-b from-gray-770 via-gray-970 to-gray-770 flex justify-center">
-              <div className="max-w-screen-lg mx-auto px-3 flex flex-col justify-center gap-3 text-center text-gray-700 sm:text-white">
+            <div className="flex absolute top-0 left-0 w-full h-full bg-gradient-to-b from-gray-770 via-gray-970 to-gray-770 justify-center">
+              <div className="hidden sm:flex max-w-screen-lg mx-auto px-3 flex-col justify-center gap-3 text-center text-gray-700 sm:text-white">
                 <h1 className="text-2xl sm:text-6xl text-accent sm:text-white">
                   Grafenwert Immobilien
                 </h1>
@@ -104,9 +100,40 @@ export default function CommercialSpecialistCampagne() {
                   die perfekte Lösung für Sie
                 </h3>
               </div>
+              <div className="absolute top-5 left-1/2 -translate-x-1/2">
+                {imageNameLookup[imageName] && (
+                  <h3 className="text-xl sm:text-2xl text-white">
+                    {imageNameLookup[imageName]}
+                  </h3>
+                )}
+              </div>
+            </div>
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1">
+              {imageNames.map((name) => (
+                <button
+                  onClick={() => setImageName(name)}
+                  className={`border border-white rounded-full w-4 h-4 ${
+                    imageName === name ? 'bg-white' : ''
+                  }`}
+                ></button>
+              ))}
             </div>
           </div>
         </header>
+        <div className="flex sm:hidden w-full h-full bg-none justify-center my-5">
+          <div className="max-w-screen-lg mx-auto px-3 flex flex-col justify-center gap-3 text-center text-gray-700">
+            <h1 className="text-2xl sm:text-6xl text-accent">
+              Grafenwert Immobilien
+            </h1>
+            <h2 className="text-xl sm:text-3xl mb-2">
+              Ihr Gewerbevermietungs-Experte
+            </h2>
+            <h3 className="text-xl">
+              Von Büros über Industrie bis hin zum Einzelhandel - Wir finden die
+              perfekte Lösung für Sie
+            </h3>
+          </div>
+        </div>
         <main className="my-9">
           <div className="max-w-screen-lg mx-auto mb-10">
             <h1 className="text-accent text-center text-2xl sm:text-4xl">
