@@ -67,7 +67,7 @@ function ExtendedInputGroup({
       <label htmlFor={id} className="text-gray-700">
         {label}
       </label>
-      <div className="w-full border-2 border-gray-200 rounded-md flex justify-center items-center gap-2">
+      <div className="w-full border-2 bg-white border-gray-200 rounded-md flex justify-center items-center gap-2">
         {prefix && (
           <div className="border-r-2 border-gray-200 px-3 py-1.5 text-gray-500 text-lg">
             {prefix}
