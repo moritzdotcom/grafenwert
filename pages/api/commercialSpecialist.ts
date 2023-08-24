@@ -19,11 +19,11 @@ function itemRow(label: string, value?: string | number) {
 }
 
 const searchTypeLookup: { [key: string]: string } = {
-  office: 'Bürogebäude',
-  medical: 'Praxis',
-  production: 'Produktionsstätte',
-  restaurant: 'Restaurant',
-  shop: 'Ladenfläche',
+  office: 'Büros',
+  medical: 'Praxen',
+  production: 'Industrie und Logistik',
+  restaurant: 'Gastronomie und Hotelerie',
+  shop: 'Einzelhandel',
   other: 'Sonstiges',
 };
 

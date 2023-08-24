@@ -19,11 +19,11 @@ const imageNames = [
 ];
 
 const imageNameLookup: { [key: string]: string } = {
-  bank: 'Bürogebäude',
+  bank: 'Büros',
   medical: 'Praxen',
-  production: 'Produktionsstätten',
-  office: 'Bürogebäude',
-  restaurant: 'Gastronomie',
+  production: 'Industrie und Logistik',
+  office: 'Büros',
+  restaurant: 'Gastronomie und Hotelerie',
   shop: 'Einzelhandel',
 };
 
@@ -207,15 +207,6 @@ type ErrorObject = {
   privacy?: string;
 };
 
-const searchTypeLookup: { [key: string]: string } = {
-  office: 'das perfekte Bürogebäude',
-  medical: 'die passende Praxis',
-  production: 'die optimale Produktionsstätte',
-  restaurant: 'das ideale Restaurant',
-  shop: 'die perfekte Ladenfläche',
-  other: 'die perfekte Immobilie',
-};
-
 function ContactForm() {
   const [companyName, setCompanyName] = useState('');
   const [name, setName] = useState('');
@@ -315,8 +306,8 @@ function ContactForm() {
         className="p-4 my-4 text-gray-700 bg-gray-100 rounded-lg text-lg"
         role="alert"
       >
-        Wir haben {searchTypeLookup[searchType]} für Sie gefunden! Wir antworten
-        Ihnen so schnell wie möglich.
+        Wir haben die perfekte Immobilie für Sie gefunden! Wir antworten Ihnen
+        so schnell wie möglich.
       </div>
     );
   if (showFailureMessage)
@@ -343,52 +334,10 @@ function ContactForm() {
         </div>
       ) : (
         <>
-          <h3 className="text-accent text-lg font-semibold">
-            Ihre Kontaktdaten
+          <h3 className="text-accent text-lg font-semibold mb-3">
+            Was Sie suchen
           </h3>
           <div className="flex flex-col gap-3">
-            <div className="flex flex-col sm:flex-row gap-3">
-              <InputGroup
-                id="CompanyName"
-                label="Firma*"
-                value={companyName}
-                onChange={(e) => setCompanyName(e.target.value)}
-                error={errors.companyName}
-              />
-              <InputGroup
-                id="Name"
-                label="Ansprechpartner (Vor- & Nachname)*"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                error={errors.name}
-              />
-            </div>
-            <InputGroup
-              id="address"
-              type="text"
-              label="Anschrift der Firma*"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              error={errors.address}
-            />
-            <InputGroup
-              id="email"
-              type="email"
-              label="Email*"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              error={errors.email}
-            />
-            <InputGroup
-              id="phone"
-              type="tel"
-              label="Telefonnummer (optional)"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-            />
-            <h3 className="text-accent text-lg font-semibold">
-              Was Sie suchen
-            </h3>
             <div className="flex flex-col">
               <label htmlFor="searchType" className="text-gray-700">
                 Ich suche*
@@ -398,11 +347,11 @@ function ContactForm() {
                 onChange={(e) => setSearchType(e.target.value)}
                 className="p-2.5 border-gray-200 border-2 rounded-md outline-none text-accent"
               >
-                <option value="office">Ein Bürogebäude</option>
-                <option value="medical">Eine Praxis</option>
-                <option value="production">Eine Produktionsstätte</option>
-                <option value="restaurant">Ein Restaurant</option>
-                <option value="shop">Ein Einzelhandelsgeschäft</option>
+                <option value="office">Büros</option>
+                <option value="medical">Praxen</option>
+                <option value="production">Industrie und Logistik</option>
+                <option value="restaurant">Gastronomie und Hotelerie</option>
+                <option value="shop">Einzelhandel</option>
                 <option value="other">Sonstiges</option>
               </select>
             </div>
@@ -442,6 +391,48 @@ function ContactForm() {
                 onChange={(e) => setSizeTo(e.target.value)}
               />
             </div>
+            <h3 className="text-accent text-lg font-semibold">
+              Ihre Kontaktdaten
+            </h3>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <InputGroup
+                id="CompanyName"
+                label="Firma*"
+                value={companyName}
+                onChange={(e) => setCompanyName(e.target.value)}
+                error={errors.companyName}
+              />
+              <InputGroup
+                id="Name"
+                label="Ansprechpartner (Vor- & Nachname)*"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                error={errors.name}
+              />
+            </div>
+            <InputGroup
+              id="address"
+              type="text"
+              label="Anschrift der Firma*"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              error={errors.address}
+            />
+            <InputGroup
+              id="email"
+              type="email"
+              label="Email*"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              error={errors.email}
+            />
+            <InputGroup
+              id="phone"
+              type="tel"
+              label="Telefonnummer (optional)"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
           </div>
           <div className="mt-5 grid grid-cols-[20px_1fr] items-start gap-2">
             <input
