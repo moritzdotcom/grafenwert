@@ -8,6 +8,7 @@ import { GetServerSidePropsContext } from 'next/types';
 import { google } from 'googleapis';
 import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs';
+import YouTubeVideo from '@/components/youTubeVideo';
 
 export default function Home({ videoUrls }: { videoUrls?: string[] }) {
   const title = 'Grafenwert Immobilien';
@@ -143,15 +144,7 @@ export default function Home({ videoUrls }: { videoUrls?: string[] }) {
               </h1>
               <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3 p-3">
                 {videoUrls.map((videoUrl) => (
-                  <iframe
-                    key={videoUrl}
-                    width="100%"
-                    className="aspect-video"
-                    src={videoUrl}
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
+                  <YouTubeVideo key={videoUrl} url={videoUrl} />
                 ))}
               </div>
             </div>
@@ -209,7 +202,6 @@ export async function getServerSideProps({ res }: GetServerSidePropsContext) {
     const videoUrls = videoIds.map(
       (id) => `https://www.youtube.com/embed/${id}`
     );
-    console.log(videoUrls);
 
     // Send the video details as the API response
     return { props: { videoUrls } };
